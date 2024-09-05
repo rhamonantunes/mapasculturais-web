@@ -1,7 +1,7 @@
 FROM quay-registry.apps.rjoseant.vmware.tamlab.rdu2.redhat.com/quay-registry/nginx:latest
 MAINTAINER RedHat <rjoseant@redhat.com>
 
-ENV SERVICE="mapasculturais"
+ENV MAPASCULTURAIS_SERVICE="mapasculturais"
 
 RUN mkdir -p /var/www/html
 RUN touch /var/www/html/index.php
