@@ -8,5 +8,8 @@ RUN touch /var/www/html/index.php
 
 COPY default.conf.template /etc/nginx/conf.d/default.conf.template
 COPY docker-entrypoint.sh /
+
+RUN chmod +x /entrypoint.sh
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
