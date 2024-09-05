@@ -7,7 +7,7 @@ RUN mkdir -p /var/www/html
 RUN touch /var/www/html/index.php
 
 COPY default.conf.template /etc/nginx/conf.d/default.conf.template
-COPY docker-entrypoint.sh /
+COPY entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
 
