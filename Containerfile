@@ -6,5 +6,7 @@ ENV SERVICE="mapasculturais"
 RUN mkdir -p /var/www/html
 RUN touch /var/www/html/index.php
 
-COPY default.conf.template /etc/nginx/conf.d/default.conf
+COPY default.conf.template /etc/nginx/conf.d/default.conf.template
+COPY docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD ["nginx", "-g", "daemon off;"]
