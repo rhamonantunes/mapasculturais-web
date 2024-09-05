@@ -1,4 +1,4 @@
-FROM quay-registry.apps.rjoseant.vmware.tamlab.rdu2.redhat.com/quay-registry/nginx:latest
+FROM nginx:stable-alpine
 MAINTAINER RedHat <rjoseant@redhat.com>
 
 ENV MAPASCULTURAIS_SERVICE="mapasculturais"
